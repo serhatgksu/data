@@ -1,0 +1,1339 @@
+;edit this to your needs
+
+;this could be used to take a random image from a folder
+;[local_images_to_data_url]
+;type=image
+;result=\n\n<img src="%spinfolder_data_url-c:\some\folder\with\images\%" style="max-width:4{1|2|3|4|5|0|0|0}0px;float:{#left left|#left left|#left left|#left left|#right right};padding:{#right 10px 0px 10px 10px|#left 10px 10px 10px 0px};border:0px;">
+
+;doesnt give many results
+;[imageafter.com]
+;url=http://www.imageafter.com/search.php?search=%search%&x=0&y=0
+;type=image
+;seperator=class="thumb">
+;content_front=alt="thumb_buttspace_normal" /><a href="
+;content_back="
+;result=\n\n<img src="%content%" alt="%search%" title="(c) imageafter.com" style="max-width:4{1|2|3|4|5|0|0|0}0px;float:{#left left|#left left|#left left|#left left|#right right};padding:{#right 10px 0px 10px 10px|#left 10px 10px 10px 0px};border:0px;">
+
+;[commons.wikimedia.org]
+;url=http://commons.wikimedia.org/w/index.php?search=%search%&button=Senden&title=Special%3ASearch
+;type=image
+;seperator=<table class="searchResultImage">
+;content_front=<a href="/wiki/File:
+;content_back="
+;author_front=| author 
+;author_back1=|
+;author_back2=<
+;title_front=title="File:
+;title_back="
+;result=\n\n<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/-%content%/400px-%content%" alt="%search%" title="%title% (c) %author%" style="max-width:4{1|2|3|4|5|0|0|0}0px;float:{#left left|#left left|#left left|#left left|#right right};padding:{#right 10px 0px 10px 10px|#left 10px 10px 10px 0px};border:0px;">
+
+
+;full url only visible with right referrer
+;[publicdomainpictures.net]
+;url=http://www.publicdomainpictures.net/hledej.php?hleda=%search%&seradit=relevancy
+;type=image
+;seperator=<div class="box">
+;content_front=<img src="
+;content_back="
+;title_front=</a><br />
+;title_back=<
+;replace=/t/;/nahled/
+;result=\n\n<img src="%content%" alt="%search%" title="%title%" style="max-width:4{1|2|3|4|5|0|0|0}0px;float:{#left left|#left left|#left left|#left left|#right right};padding:{#right 10px 0px 10px 10px|#left 10px 10px 10px 0px};border:0px;">
+
+[photobucket.com]
+url=http://photobucket.com/images/%search%?sort=1&page=1
+type=image
+seperator={"pictureId":"
+content_front=fullsizeUrl":"
+content_back="
+author_front=username":"
+author_back="
+title_front=title":"
+title_back="
+result=\n\n<img src="%content%" alt="%search%" title="%title% (c) %author%" style="max-width:4{1|2|3|4|5|0|0|0}0px;float:{#left left|#left left|#left left|#left left|#right right};padding:{#right 10px 0px 10px 10px|#left 10px 10px 10px 0px};border:0px;">
+replace=\/;/|%5C;
+
+[pixabay.com]
+url=https://pixabay.com/en/photos/?q=%search%&per_page=150
+type=image
+seperator=><img onerror="img_error(this);"
+content_front=src="
+content_back="
+result=\n\n<img src="%content%" alt="%search%" style="max-width:4{1|2|3|4|5|0|0|0}0px;float:{#left left|#left left|#left left|#left left|#right right};padding:{#right 10px 0px 10px 10px|#left 10px 10px 10px 0px};border:0px;">
+
+
+[fotki.com]
+url=http://search.fotki.com/?q=%search%
+type=image
+seperator=<div class="fleft">
+content_front=src="
+content_back="
+title_front=title="
+title_back="
+result=\n\n<img src="%content%" alt="%search%" title="%title% (C) fotki.com" style="max-width:4{1|2|3|4|5|0|0|0}0px;float:{#left left|#left left|#left left|#left left|#right right};padding:{#right 10px 0px 10px 10px|#left 10px 10px 10px 0px};border:0px;">
+replace=-th.;-vi.
+
+[flickr.com]
+url=http://www.flickr.com/search/?q=%search%&l=commderiv&ct=0&mt=photos&adv=1
+type=image
+seperator=<div class="hover-target">
+content_front1=<span class="photo_container
+content_front2="><img id="photo_img_
+content_front3= src="
+content_back="
+author_front=class="owner">
+author_back=<
+title_front=title="
+title_back="
+result=\n\n<img src="%content%" alt="%search%" title="%title% (c) %author%" style="max-width:4{1|2|3|4|5|0|0|0}0px;float:{#left left|#left left|#left left|#left left|#right right};padding:{#right 10px 0px 10px 10px|#left 10px 10px 10px 0px};border:0px;">
+must have=!*/search/src*
+
+[picsearch.com]
+url=http://www.picsearch.com/index.cgi?q=%search%&sz=medium
+type=image
+seperator=<span class="result">
+content_front=src="
+content_back="
+title_front=alt="
+title_back="
+author_front=<span class="pagedomain">
+author_back=<
+result=\n\n<img src="%content%" alt="%search%" title="%title% (c) %author%" style="max-width:4{1|2|3|4|5|0|0|0}0px;float:{#left left|#left left|#left left|#left left|#right right};padding:{#right 10px 0px 10px 10px|#left 10px 10px 10px 0px};border:0px;">
+
+[youtube.com]
+url=http://www.youtube.com/results?filters=video&search_query=%search%&lclk=video
+type=video
+seperator=<li class="yt-lockup2|<li class="yt-lockup clearfix
+cut_top=<ol id="search-results"
+content_front1=<a href="
+content_front2=v=
+content_back1="
+content_back2=&
+author_front=<a href="/user/
+author_back1="
+author_back2=
+title_front=dir="ltr"title="|data-context-item-title="
+title_back="
+result=<iframe width="640" height="360" src="//www.youtube.com/embed/%content%" frameborder="0" allowfullscreen title="%title% (c) by %author%" style="float:{#vleft left|#vleft left|#vleft left|#vleft left|#vright right};padding:{#vright 10px 0px 10px 10px|#vleft 10px 10px 10px 0px};border:0px;"></iframe>
+must have=!google !__url__
+
+[google.com]
+url=http://www.google.de/search?q=%search%
+type=link
+seperator=<h3 class="r">
+content_front1=href="
+content_front2=?url=|/url?q=
+content_back="|&amp
+result=<a href="%content%">%search%</a>
+must have=!google
+
+[bing.com]
+url=http://www.bing.com/search?q=%search%
+type=link
+seperator=<li class="b_algo">
+content_front=href="
+content_back="
+result=<a href="%content%">%search%</a>
+must have=!google !bing !dict !msn
+
+[ezinearticles.com]
+url=http://ezinearticles.com/search/?q=%search%
+type=article
+seperator=<div class="result-title">
+url_front=<div class="result-url">
+url_back=" - "
+content_front=<div id="article-content">
+content_back=<div id="article-resource">
+author_front=href="/?expert=
+author_back="
+title_front=<title>
+title_back=</title>
+result=%content%|article_title=%title%
+remove html=1
+
+[articlesbase.com]
+url=http://www.articlesbase.com/find-articles.php?q=%search%
+seperator=<div class="article_row">
+type=article
+url_front1=<h3><a title="
+url_front2=href="
+url_back="
+content_front=<!--INFOLINKS_ON-->
+content_front2=<!--INFOLINKS_ON-->
+content_back=<div class="block-author">
+author_front=itemprop="author">
+author_back=<
+title_front=<title>
+title_back=</title>
+result=%content%|article_title=%title%
+remove html=1
+
+[ezinemark.com]
+url=http://ezinemark.com/a/%search%/
+type=article
+seperator=<div class="l_search">
+url_front=<h3><a href="
+url_back="
+content_front=<div id="art_content">
+content_back=<div style="height:15px;">
+author_front=<a href="http://ezinemark.com/u/
+author_front2=<strong>
+author_back=<
+title_front=<title>
+title_back=</title>
+result=%content%|article_title=%title%
+remove html=1
+
+[sooperarticles.com]
+url=http://www.sooperarticles.com/search/?t=contents&s=%search%
+seperator=<article class="list hentry post short">
+type=article
+url_front=class="entry-title"><a href="
+url_back1="
+url_back2=?page_tag=
+content_front=<!--INTEXT_ON-->
+content_back=<!--INTEXT_OFF-->
+author_front=<span rel="author me"><b>
+author_back=<
+title_front=<title>
+title_back=</title>
+result=%content%|article_title=%title%
+remove html=1
+
+[goarticles]
+url=http://goarticles.com/search/?type=&q=%search%&x=0&y=0
+type=article
+seperator=<div class="s_article">
+url_front=<a href="
+url_back="
+title_front=name="twitter:title" content="|<h1 class="art_head">|<title>
+title_back=<em>
+title_back2=</title>
+title_back3=">
+author_front=<em> by
+author_back=<
+content_front=<div style="width:420px; margin-bottom:10px">
+content_back=<div id="a_disclaimer">
+remove html=1
+result=%content%|article_title=%title%
+
+
+
+[fotologue.jp]
+url=http://fotologue.jp/services/api?random=9126&operation=search%2Efiles&count=true&limit=20&offset=0&tags=%search%
+type=image
+seperator=<entry>
+author_front=<displayName>
+author_back=</
+title_front=<title>
+title_back=</
+content_front=<key>
+content_back=</
+serverid_front=<serverId>
+serverid_back=</
+fileid_front=<fileId>
+fileid_back=</
+result=\n\n<img src="http://img1.fotologue.jp/res/%serverid%/%fileid%_%content%_m.jpg" alt="%search%" title="%title% (c) %author%" style="max-width:4{1|2|3|4|5|0|0|0}0px;float:{#left left|#left left|#left left|#left left|#right right};padding:{#right 10px 0px 10px 10px|#left 10px 10px 10px 0px};border:0px;">
+
+[soku.com]
+url=http://www.soku.com/search_video/q_%search%
+type=video
+seperator=<div class="v">
+content_front=/v_show/id_
+content_back=.html
+title_front=<a title="
+title_back="
+author_front1=<span class="username">
+author_front2=>
+author_back=<
+result=<iframe height=498 width=510 src="http://player.youku.com/embed/%content%" frameborder=0 allowfullscreen title="%title% (c) %author%" style="float:{#vleft left|#vleft left|#vleft left|#vleft left|#vright right};padding:{#vright 10px 0px 10px 10px|#vleft 10px 10px 10px 0px};border:0px;"></iframe>
+
+[veoh.com]
+url=http://www.veoh.com/find/?query=%search%&mode=video&lang=ALL
+type=video
+seperator=<div id="vThumbWrapper_browse_
+content_front=videoId":"
+content_back="
+author_front=<dt>by:</dt><dd>
+author_back=</
+title_front=title="
+title_back="
+result=<iframe height=498 width=510 src="http://www.veoh.com/static/swf/veoh/SPL.swf?videoAutoPlay=0&permalinkId=%content%" frameborder=0 allowfullscreen title="%title% (c) %author%" style="float:{#vleft left|#vleft left|#vleft left|#vleft left|#vright right};padding:{#vright 10px 0px 10px 10px|#vleft 10px 10px 10px 0px};border:0px;"></iframe>
+
+[dailymotion.com]
+url=http://www.dailymotion.com/de/relevance/search/%search%/1
+type=video
+seperator=<div  class="dmpi_video_preview
+content_front=data-id="
+content_back="
+author_front=<span class="name">
+author_back=<
+title_front=class="dmco_image" title="
+title_back="
+result=<iframe frameborder="0" width="480" height="270" src="http://www.dailymotion.com/embed/video/%content%" title="%title% (c) %author%" style="float:{#vleft left|#vleft left|#vleft left|#vleft left|#vright right};padding:{#vright 10px 0px 10px 10px|#vleft 10px 10px 10px 0px};border:0px;"></iframe>
+
+[yahoo video]
+url=http://video.search.yahoo.com/search/?ei=UTF-8&fr=screen&q=%search%
+type=video
+seperator=<li class="vr">
+content_front=data-rurl="
+content_back="
+title_front=,"d":"
+title_back="
+result=<iframe width="624" height="351" scrolling="no" frameborder="0" src="%content%?format=embed&player_autoplay=false" title="%title%" style="float:{#vleft left|#vleft left|#vleft left|#vleft left|#vright right};padding:{#vright 10px 0px 10px 10px|#vleft 10px 10px 10px 0px};border:0px;"></iframe>
+;must have=screen.yahoo.com|movies.yahoo.com
+
+[blip.tv]
+url=http://blip.tv/search?q=%search%
+type=video
+seperator=<div class="MyBlipEpisodeCardWrap"
+url_front=<a href="
+url_back="
+content_front1=http://blip.tv/play/|http%3A%2F%2Fblip.tv%2Fplay%2F|http%3A%2F%2Fa.blip.tv%2Fapi.swf%23|http://a.blip.tv/api.swf#
+content_back1=?
+content_back2=&
+content_back3="
+content_back4=%
+content_back5=.
+title_front=<h3>
+title_back=</
+result=<iframe src="http://blip.tv/play/%content%.x?p1=" width="720" height="433" frameborder="0" allowfullscreen title="%title%" style="float:{#vleft left|#vleft left|#vleft left|#vleft left|#vright right};padding:{#vright 10px 0px 10px 10px|#vleft 10px 10px 10px 0px};border:0px;"></iframe>
+
+[metacafe.com]
+url=http://www.metacafe.com/videos_about/%search%/newest/
+type=video
+seperator=<article>
+content_front=href="/watch/|Catalog1-Item|.mcstatic.com/thumb/|Catalog1-Submitter
+content_back1=/
+content_back2="
+content_back3=" "
+title_front=title="
+title_back="
+author_front=title="Submitted by 
+author_back="
+result=<iframe src="http://www.metacafe.com/embed/%content%/" width="440" height="248" allowFullScreen frameborder=0 title="%title% (c) %author%" style="float:{#vleft left|#vleft left|#vleft left|#vleft left|#vright right};padding:{#vright 10px 0px 10px 10px|#vleft 10px 10px 10px 0px};border:0px;"></iframe>
+
+[videobash.com]
+url=http://www.videobash.com/search/mr?search=%search%
+type=video
+seperator=<li class="thumbs-video-wrapper">
+url_front=<a href="
+url_back="
+content_front=<textarea class="embeded-box">
+content_back=</textarea>
+title_front=property="og:title" content="
+title_back="
+result=<span style="float:{#left left|#left left|#left left|#left left|#right right};padding:{#right 10px 0px 10px 10px|#left 10px 10px 10px 0px};border:0px;">%content%</span>
+
+[justin.tv]
+url=http://www.justin.tv/search?q=%search%
+type=video
+seperator=<li id="form-archive-update-
+author_front=data-username="
+author_back="
+title_front=class="title broadcast-title">
+title_back="
+content_front=<a href="/
+content_back=/
+content_back2="
+result=<iframe src="http://justin.tv/widgets/jtv_player.swf?&channel=%content%&auto_play=true" width="450" frameborder="0" height="300" style="float:{#vleft left|#vleft left|#vleft left|#vleft left|#vright right};padding:{#vright 10px 0px 10px 10px|#vleft 10px 10px 10px 0px};border:0px;"></iframe>
+
+[ustream.tv]
+url=http://www.ustream.tv/search?q=%search%
+type=video
+seperator=<div class="item media-item">
+title_front=title="
+title_back="
+author_front=<a href="/channel/
+author_back="
+content_front=data-mediaid="|<a href="/recorded/|data-og-url="/recorded/
+content_back="
+result=<iframe width="480" height="302" src="https://www.ustream.tv/embed/%content%" frameborder="0" height="300" title="%title% (c) %author%" style="float:{#vleft left|#vleft left|#vleft left|#vleft left|#vright right};padding:{#vright 10px 0px 10px 10px|#vleft 10px 10px 10px 0px};border:0px;"></iframe>
+
+[imgfave]
+url=http://imgfave.com/search/%search%
+type=image
+seperator=<div class="item_links">
+content_front1=<div id="
+content_front2=<img src="
+content_back="
+title_front=alt="
+title_back="
+result=\n\n<img src="%content%" alt="%search%" title="%title% (C) %author%" style="max-width:4{1|2|3|4|5|0|0|0}0px;float:{#left left|#left left|#left left|#left left|#right right};padding:{#right 10px 0px 10px 10px|#left 10px 10px 10px 0px};border:0px;">
+
+[socwall.com]
+url=http://www.socwall.com/wallpapers/search:%search%/
+type=image
+seperator=<li class="wallpaper
+content_front=src="
+content_back="
+author_front=<p class="author">
+author_back=<
+title_front=<h2 class="title">
+title_back=<
+result=\n\n<img src="%content%" alt="%search%" title="%title% (C) %author%" style="max-width:4{1|2|3|4|5|0|0|0}0px;float:{#left left|#left left|#left left|#left left|#right right};padding:{#right 10px 0px 10px 10px|#left 10px 10px 10px 0px};border:0px;">
+
+[articlesfactory.com]
+url=http://www.articlesfactory.com/search/%search%/
+type=article
+seperator=<img src="http://www.articlesfactory.com/pic/delimiter_long.gif"
+url_front1=<div class="h2">
+url_front2=href="
+url_back="
+content_front=</b></p>|<h1 class="h2">
+content_front2=</script>
+content_back=<p class="txt-small-regular">
+content_back2=Article Tags:
+author_front=/author/
+author_front2=.html">
+author_back=<
+title_front=<title>|h1 class="h2">|width="25" height="23" alt="Digg: |width="25" height="23" alt="Print: |width="24" height="23" alt="Email: 
+title_back=</
+title_back2="
+result=%content%|article_title=%title%
+remove html=1
+
+
+[artipot.com]
+url=http://www.artipot.com/search/?q=%search%
+type=article
+seperator=<div class="articles
+url_front1=href="
+url_back="
+content_front=<div class="artcontent">
+content_back=<div id="signature">
+author_front=rel="author">
+author_back=<
+title_front=<title>|<div class="title">|var disqus_title = '
+title_back=</
+title_back2=';
+result=%content%|article_title=%title%
+remove html=1
+
+[businessinsider.com]
+url=http://www.businessinsider.com/s?q=%search%
+type=article
+seperator=<div class="search-result">
+url_front=href="
+url_back="
+title_front=<title>|<meta name="title" content="|<meta name="sailthru.title" content="|<meta property="og:title" content="|<meta property="twitter:title" content="|<h1>
+title_back=- Business Insider</title>
+title_back2="
+title_back3=<
+author_front1=<h1>
+author_front2=/author/
+author_front3=>
+author_back=<
+content_front="http://www.w3.org/TR/REC-html40/loose.dtd">|<div class="KonaBody post-content">
+content_back=</div>
+result=%content%|article_title=%title%
+remove html=1
+
+[cnet.com]
+url=http://news.cnet.com/1770-5_3-0.html?query=%search%&tag=srch&searchtype=news
+type=article
+seperator=<div class="resultInfo">
+url_front=href="
+url_back="
+title_front=name="twitter:title" content="|PageVars.set('title', "|<meta property="og:title" content="|<header section="title"> <h1>
+title_back="
+title_back2= - CNET News");
+title_back3=<
+author_front1=<span class="image-credit">
+author_front2=(Credit:
+author_back=<
+content_front=<article id="contentBody"
+content_front2=<p
+content_front3=>
+content_back=<h3>Related stories</h3>
+content_back2=<footer>
+content_back3=<div section="tags"
+result=%content%|article_title=%title%
+remove html=1
+
+[gather.com]
+url=http://www.gather.com/searchResultsArticles.jsp?keywords=%search%&submit=Search&contentType=Articles
+type=article
+seperator=<div style="overflow: hidden">
+url_front=href="
+url_back="
+title_front=<h1 class="contentTitle">|<meta property="og:title" content="|var addthis_linkname  = '
+title_back=</
+title_back2="/>
+title_back3=';
+author_front1=<div class="contentByline">
+author_front2=by
+author_back=</a>
+content_front=<div class="articleText">
+content_back=</div>
+content_back2=END AKISMET
+content_back3=This article has been flagged as spam
+result=%content%|article_title=%title%
+remove html=1
+
+[hubpages.com]
+url=http://hubpages.com/search/%search%
+type=article
+seperator=<li class="article_result">
+url_front=href="
+url_back="
+title_front=<title>
+title_back=</title>
+author_front=<div class="author_byline">
+author_front2=by
+author_back=</a
+content_front=<div class="modfloat full">
+content_back=<p class="muted">
+result=%content%|article_title=%title%
+remove html=1
+
+[reuters.com]
+url=http://www.reuters.com/search?blob=%search%
+type=article
+seperator=<div class="sectionDivider"></div>
+url_front=<li><a href="
+url_back="
+title_front=og:title" content="
+title_back="
+author_front=name="Author" content="By
+author_back="
+content_front1=<span class="articleLocation">
+content_front2=</span> 
+content_back=<div class="linebreak"></div>
+result=%content%|article_title=%title%
+remove html=1
+remove=(Reuters)|REUTERS
+
+
+[bbc.co.uk]
+url=http://www.bbc.co.uk/search/news/?q=%search%&video=on&audio=on&text=on
+type=article
+seperator=<li class="linktrack-item
+url_front=href="
+url_back="
+title_front=<title>BBC News - |<h1 class="story-header">
+title_back=</
+author_front=<span class="byline-name">By
+author_back=<
+content_front1=<p class="introduction"
+content_front2=">
+content_back=<div class="story-related">
+result=%content%|article_title=%title%
+remove html=1
+
+[dailymail.co.uk]
+url=http://www.dailymail.co.uk/home/search.html?pageOffset=&pageSize=&sel=site&searchPhrase=%search%&orderBy=relevDesc&_channelshortname=on&_channelshortname=on&_channelshortname=on&_channelshortname=on&_channelshortname=on&_channelshortname=on&_channelshortname=on&_channelshortname=on&_channelshortname=on&_contenttype=on&dateupdated=&dateFrom=&dateTo=&_personnames=on&_personnames=on
+type=article
+seperator=<div class="sch-result home cleared">
+url_front=href="
+url_back="
+title_front=title" content="
+title_back="
+author_front=authorName: '
+author_back='
+content_front1=DMS.Article.init('top');|<p><font style="font-size:1.2em;">
+content_front2=>
+content_back=<div class="shareArticles">|<div class="adHolder item" id="inread-player">|<div class="column-content cleared">
+result=%content%|article_title=%title%
+remove html=1
+
+[independent.co.uk]
+url=http://www.independent.co.uk/search/simple.do?destinationSectionUniqueName=search&publicationName=ind&sortString=publishdate&sortOrder=desc&sectionId=506&articleTypes=news&pageNumber=1&pageLength=10&startDay=1&startMonth=1&startYear=2010&useSectionFilter=true&useHideArticle=true&searchString=%search%
+type=article
+seperator=<h3 class="resultTitle">
+url_front=href="
+url_back="
+title_front=og:title" content="
+title_back="
+author_front=<span class="authorName">
+author_back=<
+content_front1=articleContent
+content_front2=>
+content_back=<div class="clear"></div>
+result=%content%|article_title=%title%
+remove html=1
+
+[mirror.co.uk]
+url=http://www.mirror.co.uk/search/simple.do?destinationSectionId=219&publicationName=mirror&sortString=publishdate&sortOrder=desc&sectionId=69&articleTypes=news+opinion+advice&pageNumber=1&pageLength=10&searchString=%search%
+type=article
+seperator=<div class="article
+url_front=href="
+url_back="
+title_front=og:title" content="
+title_back="
+author_front=class="author">
+author_back=<
+content_front1=<div class="body ">
+content_back=<!-- end of widget
+result=%content%|article_title=%title%
+remove html=1
+
+[upublish.info]
+url=http://www.upublish.info/keywords/%search%
+type=article
+cut_top=http://schema.org/Article">
+seperator=http://schema.org/Article">
+url_front=href="
+url_back="
+title_front=<title>|<h2>
+title_back= - written by 
+title_back2=</
+author_front=written by 
+author_back=</
+content_front=<span itemprop="articleBody">
+content_back=Article Source:
+result=%content%|article_title=%title%
+remove html=1
+
+
+;**************************
+;* article script engines *
+;**************************
+
+[articlebottle.com]
+url=http://www.articlebottle.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[wall2wallarticles.com]
+url=http://www.wall2wallarticles.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[3wgate.com]
+url=http://www.3wgate.com/articles/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[yudiherdiana.net]
+url=http://yudiherdiana.net/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[thecontentdirectory.com]
+url=http://thecontentdirectory.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[99artical.com]
+url=http://www.99artical.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[editorstime.com]
+url=http://editorstime.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[365articledirectory.com]
+url=http://365articledirectory.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[csseng.net]
+url=http://csseng.net/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[arvinoorsiregar.com]
+url=http://www.arvinoorsiregar.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[tumth.com]
+url=http://www.tumth.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[article.neox.in]
+url=http://article.neox.in/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[earthworldreport.com]
+url=http://www.earthworldreport.com/articles/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[suryawebs.com]
+url=http://suryawebs.com/article/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[givefreeachance.com]
+url=http://www.givefreeachance.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[peaceandjoyschools.com]
+url=http://peaceandjoyschools.com/articles/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[postyourarticle.nztip.com]
+url=http://postyourarticle.nztip.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[moth229.com]
+url=http://moth229.com/article/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[zone509.co.nr]
+url=http://zone509.co.nr/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[article.org.in]
+url=http://www.article.org.in/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[instantnichearticle.com]
+url=http://www.instantnichearticle.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[lovingarticles.com]
+url=http://lovingarticles.com/article/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[depositarticles.com]
+url=http://www.depositarticles.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[zone509.info]
+url=http://zone509.info/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[worldstechnonews.com]
+url=http://worldstechnonews.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[zapwebdirectory.com]
+url=http://www.zapwebdirectory.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[newsarticles.biz]
+url=http://www.newsarticles.biz/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[staralgeria.net]
+url=http://article.staralgeria.net/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[discussinfo.com]
+url=http://www.discussinfo.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[forumadsdaily.com]
+url=http://forumadsdaily.com/news/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[linkfootprint.com]
+url=http://linkfootprint.com/articles/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[fellol.com]
+url=http://www.fellol.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[qwikezine.com]
+url=http://www.qwikezine.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[2dplanet.com]
+url=http://2dplanet.com/article/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[tummyabs.com]
+url=http://tummyabs.com/article/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[forumbola.org]
+url=http://zine.forumbola.org/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[contentforgood.co.uk]
+url=http://contentforgood.co.uk/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[gayaryweb.com]
+url=http://www.gayaryweb.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[earth-essences.org]
+url=http://earth-essences.org/articleChest/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[shahed.us]
+url=http://shahed.us/site/news/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[aridgecko.com]
+url=http://aridgecko.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[nuvohost.com]
+url=http://nuvohost.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[shoowf.net]
+url=http://www.shoowf.net/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
+
+[citylinkads.com]
+url=http://www.citylinkads.com/search.php?s=%search%
+type=article
+cut_top=<h1 id="title">
+seperator=<h2>
+url_front=href="
+url_back="
+title_front=<h1>
+title_back=</
+content_front=<div id="content-body">
+content_back=<h2>|</div>
+remove html=1
+author_front=<h2>About the Author</h2>
+author_front2=<td><b>
+author_back=<
+result=%content%|article_title=%title%
