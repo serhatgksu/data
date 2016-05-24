@@ -1,0 +1,87 @@
+
+;
+;[Section] << category- just one variation from a section is chosen
+;max length=30 << max. size of text that is modified
+;
+;Description=variation1|variation2|... 
+; ^ Description is just shown when setting things up
+; ^ variationsX is taken randomly from the list who should all have more or less the same result but with different syntax
+; ^ if there has to be set something in front and back of the text you have to use: <front>[...]</back>
+;
+; would be nice if someone can extend this much further 
+
+
+[Decoration]
+max length=30
+Light=<span style="font-weight: lighter;">[...]</span>|<span style="font-weight: 100;">[...]</span>|<span style="font-weight: 200;">[...]</span>|<span style="font-weight: 300;">[...]</span>|<span style="font-weight: 400;">[...]</span>
+Bold=<strong>[...]</strong>|<b>[...]</b>|<span style="font-weight: bolder;">[...]</span>|<span style="font-weight: bold;">[...]</span>|<span style="font-weight: 600;">[...]</span>|<span style="font-weight: 700;">[...]</span>|<span style="font-weight: 800;">[...]</span>|<span style="font-weight: 900;">[...]</span>
+Italic=<span style="font-style: italic;">[...]</span>|<span style="font-style: oblique;">[...]</span>|<em>[...]</em>|<i>[...]</i>
+Underline=<span style="text-decoration: underline;">[...]</span>|<u>[...]</u>
+Underline - Red=<span style="text-decoration: underline;text-decoration-color: red;">[...]</span>
+Underline - Green=<span style="text-decoration: underline;text-decoration-color: green;">[...]</span>
+Underline - Blue=<span style="text-decoration: underline;text-decoration-color: blue;">[...]</span>
+Uppercase=<span style="font-variant: small-caps;">[...]</span>|<span style="text-transform:uppercase;">[...]</span>
+Lowercase=<span style="text-transform:lowercase;">[...]</span>
+First Charater Uppercase=<span style="text-transform:capitalize;">[...]</span>
+Overline=<span style="text-decoration: overline;">[...]</span>
+
+
+[Font Size]
+max length=0
+Small=<span style="font-size: xx-small;">[...]</span>|<span style="font-size: x-small;">[...]</span>|<span style="font-size: small;">[...]</span>|<span style="font-size: smaller;">[...]</span>|<span style="font-size: 80%;">[...]</span>|<span style="font-size: 60%;">[...]</span>|<span style="font-size: 0.8em;">[...]</span>|<span style="font-size: 0.6em;">[...]</span>|<span style="font-size-adjust:0.80;">[...]</span>
+Large=<span style="font-size: xx-large;">[...]</span>|<span style="font-size: x-large;">[...]</span>|<span style="font-size: large;">[...]</span>|<span style="font-size: larger;">[...]</span>|<span style="font-size: 120%;">[...]</span>|<span style="font-size: 160%;">[...]</span>|<span style="font-size: 1.2em;">[...]</span>|<span style="font-size: 1.6em";>[...]</span>|<span style="font-size-adjust:1.20;">[...]</span>
+Expand=<span style="font-stretch: semi-expanded;">[...]</span>|<span style="font-stretch: expanded;">[...]</span>|<span style="font-stretch: extra-expanded;">[...]</span>|<span style="font-stretch: ultra-expanded;">[...]</span>|<span style="font-stretch: wider;">[...]</span>
+Condensed=<span style="font-stretch: ultra-condensed;">[...]</span>|<span style="font-stretch: extra-condensed;">[...]</span>|<span style="font-stretch: condensed;">[...]</span>|<span style="font-stretch: semi-condensed;">[...]</span>|<span style="font-stretch: narrower;">[...]</span>
+Increase Line Height=<span style="line-height:120%">[...]</span>|<span style="line-height:130%">[...]</span>|<span style="line-height:2">[...]</span>
+Decrease Line Height=<span style="line-height:90%">[...]</span>|<span style="line-height:80%">[...]</span>
+Increase Word Spacing=<span style="word-spacing:1px;">[...]</span>|<span style="word-spacing:2px;">[...]</span>|<span style="word-spacing:3px;">[...]</span>|<span style="word-spacing:4px;">[...]</span>|<span style="word-spacing:5px;">[...]</span>
+Decrease Word Spacing=<span style="word-spacing:-1px;">[...]</span>
+Increase Letter Spacing=<span style="word-spacing:1px;">[...]</span>|<span style="word-spacing:2px;">[...]</span>|<span style="word-spacing:3px;">[...]</span>
+Decrease LEtter Spacing=<span style="word-spacing:-1px;">[...]</span>
+
+[Font Family]
+max length=0
+Gill Sans Extrabold=<span style="font-family: Gill Sans Extrabold, sans-serif;">[...]</span>
+Goudy Bookletter 1911=<span style="font-family: Goudy Bookletter 1911, sans-serif;">[...]</span>
+Sans Serif=<span style="font-family: sans-serif;">[...]</span>
+Serif=<span style="font-family: serif;">[...]</span>
+Fantasy=<span style="font-family: fantasy;">[...]</span>
+Cursive=<span style="font-family: cursive;">[...]</span>
+Monospace=<span style="font-family: monospace;">[...]</span>
+Courier=<span style="font-family: Courier, Courier New, monospace;">[...]</span>
+Lucida Console=<span style="font-family: Lucida Console, Monaco, Courier, Courier New, monospace;">[...]</span>
+Gramond=<span style="font-family: Garamond, Georgia, Times, Times New Roman, serif;">[...]</span>
+Times=<span style="font-family: Times, Times New Roman, Georgia, Garamond, Palatino Linotype, Palatino, Book Antiqua, New York, serif;">[...]</span>
+Trebuchet MS=<span style="font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;">[...]</span>
+Verdana=<span style="font-family: Verdana, Arial, Helvetica, Trebuchet MS, Tahoma, Geneva, Lucida Sans Unicode, Lucida Grande, MS Sans Serif, sans-serif;">[...]</span>
+Arial=<span style="font-family: Arial, Helvetica, sans-serif;">[...]</span>
+
+[Font Color]
+max length=50
+Gray=<span style="color:rgb(192, 192, 192);">[...]</span>|<span style="color:rgba(255, 255, 255,0.5);">[...]</span>|<span style="color:silver;">[...]</span>|<span style="color:#bbb;">[...]</span>|<span style="color:#bbbbbb;">[...]</span>|<span style="color:hsl(120,0%,50%);">[...]</span>|<span style="color:hsla(120,0%,50%,1);">[...]</span>
+
+[Font Shadow]
+max length=100
+Red Shadow=<span style="text-shadow: 2px 2px 2px #ff0000;">[...]</span>
+Red Shadow Blur=<span style="text-shadow:2px 5px 20px red;">[...]</span>
+
+[Misc]
+Random Space=" |  |    "
+Invisible Tag=<div id="%random-a-z%%random-a-z%%random-a-z%%random-a-z%" style="display:none;"></div>|<span style="word-wrap: normal;">[...]</span>|<span style="word-wrap: break-word;">[...]</span>|<span style="word-break:keep-all;">[...]</span>|<span style="word-break:normal;">[...]</span>
+Display every space=<span style="white-space:pre;">[...]</span>|<span style="white-space:pre-wrap;">[...]</span>
+
+[Links]
+attribute for=a
+allow more than one=1
+New Window=target="_blank"
+Generic Anchor as Title=title="click here"
+Bold Red Link=style="font-weight: bolder;text-decoration: none;color:rgb(192, 0, 0);"
+Make it Nofollow=rel="Nofollow"|rel=nofollow|rel='nofollow'
+Mark the Link as Your Blog=rel="me"|rel='me'|rel=me
+
+[Paragraph]
+attribute for=p
+Left=style="text-align:left;"
+Right=style="text-align:right;"
+Center=style="text-align:center;"
+Block=style="text-justify;"
