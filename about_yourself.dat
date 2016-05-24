@@ -1,0 +1,67 @@
+{
+{There is nothing|Not much|Nothing|Got nothing} to {say|tell|write} about {me|myself} {at all|really|I think}.
+{I enjoy of finally being|Great to be|Enjoying to be|Finally|Feels good to be|Lovely to be|Nice to be here and|Hurrey Im here and|Yes! Im} a {member|part} of {this {site|community}|%targetdomain%}.
+I {really|just} {wish|hope} {Im|I'm|I am} useful {at all|in {one|some} way {here.|.}}
+|
+{My name|Name}: %spinfile-names.dat% %spinfile-lnames.dat%
+{My age|Age}: %random-18-40%{ years old|}
+Country: %columnspinfile-address_data.dat-1%
+{Home town|Town|City}: %columnspinfile-address_data.dat-3% 
+{Post code|ZIP|Postal code}: %columnspinfile-address_data.dat-4%
+{Street|Address}: %columnspinfile-address_data.dat-5%
+|
+{My name is|I am %random-18-40% years old and my name is} %spinfile-names.dat% %spinfile-lnames.dat%. I life in %columnspinfile-address_data.dat-3% (%columnspinfile-address_data.dat-1%).
+|
+{My name is|I’m|I am} %spinfile-names.dat% from %columnspinfile-address_data.dat-3% {studying|doing my final year engineering in} %spinfile-studies.dat%. I did my schooling, secured %random-70-95%% and hope to find someone with same interests in %spinfile-hobbies.dat%.
+|
+{I like my hobby|I like|My hobby is mainly|Im addicted to my hobby} %spinfile-hobbies.dat%. {{Sounds|Seems|Appears} boring? {Not at all|Not}!|}
+I {also |}{ try|} to learn %spinfile-languages.dat% in my {spare|free} time. 
+|
+My name is %spinfile-names.dat% (%random-20-50% years old) and my hobbies are %spinfile2-hobbies.dat% and %spinfile2-hobbies.dat%.
+|
+{Hello|Hello, dear friend}! {I am|My name is} %spinfile-names.dat%. I {am {happy|pleased|delighted|satisfied}|smile} that I {can|could} {unite|unify|join} to {the {whole|entire}|the entire} {world|globe}. I live in %columnspinfile-address_data.dat-1%, in the {%columnspinfile-address_data.dat-2%|south} region. I dream to {visit|go to|check out|see|head to} the {different|various} {countries|nations}, {to {get|obtain|look for}|to obtain} {acquainted|familiarized} with {interesting|fascinating|intriguing|appealing} {people|individuals}.
+|
+I'm %spinfile-names.dat% (%random-18-31%) from %columnspinfile-address_data.dat-3%, %columnspinfile-address_data.dat-1%. 
+I'm learning %spinfile-languages.dat% literature at a local {college|university|high school} and I'm just about to graduate.
+I have a part time job in a {post office|backery|the office|university|college}.
+|
+{Hi|Hello}! 
+My name is %spinfile-names.dat% and I'm a %random-17-30% years old {boy|girl} from {%columnspinfile-address_data.dat-1%|%columnspinfile-address_data.dat-3%}.
+|
+{Hello!|Hi, everybody!} My name is %spinfile-names.dat%. 
+It is a little about myself: I live in %columnspinfile-address_data.dat-1%, my city of %columnspinfile-address_data.dat-3%. 
+It's called often {Northern|Eastern} or cultural capital of %columnspinfile-address_data.dat-2%. I've married %random-1-5% years ago.
+I have {two|2} children - a son (%spinfile2-names.dat%) and the daughter (%spinfile2-names.dat%). We all like %spinfile-hobbies.dat%.
+|
+{Hello!|Hi, everybody!} 
+I'm %spinfile-languages.dat% {female|male} {:)|:D|;=)}. 
+I {really }{love|like} {%spinfile-tvseries.dat%|%spinfile-hobbies.dat%}!
+|
+Hello from %columnspinfile-address_data.dat-1%. I'm glad {to be here|to came across you|to came here}. My first name is %spinfile-names.dat%. 
+I live in a {small |}{city|town} called %columnspinfile-address_data.dat-3% in {western|nothern|south|east} %columnspinfile-address_data.dat-1%.
+I was also born in %columnspinfile-address_data.dat-3% %random-20-40% years ago. Married in %spinfile-months.dat% {year |}%random-1999-2012%. I'm working at the {post office|backery|the office|university|college}.
+|
+My {name's|name is} %spinfile-names.dat% %spinfile-lnames.dat% but everybody calls me %spinfile-names.dat%. I'm from %columnspinfile-address_data.dat-1%. I'm studying at the {college|university|high school} ({2nd|1st|3rd|final} year) and I play the %spinfile-instruments.dat% for %random-3-10% years. Usually I choose {music|songs} from {my|the} famous films {;)|:)|:D}. 
+I have two {sister|brothers}. I {like|love} %spinfile2-hobbies.dat%, watching {movies|TV (%spinfile-tvseries.dat%)} and %spinfile2-hobbies.dat%.
+|
+I'm a %random-30-50% years old{, married|} and {work|working|study} at the {college|university|high school} (%spinfile-studies.dat%).
+In my {free time|spare time} {I'm trying to|I try to|I} {teach myself|learn} %spinfile-languages.dat%. {I have|I've} been {twice| }there and look forward to {go there|returning} {sometime in the future|sometime near future|anytime soon}. I {like|love} to read{, preferably} on my {ebook reader|beloved Kindle|kindle|ipad}. I {really love|like} to watch %spinfile2-tvseries.dat% and %spinfile2-tvseries.dat% as well as {docus|documentaries} about {nature|anything {geological|astronomical|technological|scientific}}. I {love|like|enjoy} %spinfile-hobbies.dat%.
+|
+I'm %spinfile-names.dat% and I live in %columnspinfile-address_data.dat-3%. 
+I'm interested in %spinfile-studies.dat%, %spinfile-hobbies.dat% and %spinfile-languages.dat% art. I like {to travel|travelling} and {reading fantasy|watching %spinfile-tvseries.dat%}.
+|
+I'm %spinfile-names.dat% and I live with my husband and our {2|two|3|three} children in %columnspinfile-address_data.dat-3%, in the %columnspinfile-address_data.dat-2% south {area|part}. My hobbies are %spinfile2-hobbies.dat%, %spinfile2-hobbies.dat% and %spinfile2-hobbies.dat%.
+|
+Hello, I'm %spinfile-names.dat%, a %random-17-30% year old from %columnspinfile-address_data.dat-3%, %columnspinfile-address_data.dat-1%.
+My hobbies include (but are not limited to) %spinfile2-hobbies.dat%, %spinfile2-hobbies.dat% and watching %spinfile-tvseries.dat%.
+|
+Hi there! :) My name is %spinfile-names.dat%, I'm a student studying %spinfile-studies.dat% from %columnspinfile-address_data.dat-3%, %columnspinfile-address_data.dat-1%.
+|
+I'm %spinfile-names.dat% and I live in a seaside city in northern %columnspinfile-address_data.dat-1%, %columnspinfile-address_data.dat-3%. I'm %random-19-40% and I'm will soon finish my study at %spinfile-studies.dat%.
+|
+I am %spinfile-names.dat% from %columnspinfile-address_data.dat-3%. {I am learning to play the|I love to play} %spinfile-instruments.dat%. Other hobbies are %spinfile-hobbies.dat%.
+|
+{I'm|Im|I am} %spinfile-names.dat% and was born on %random-1-28% %spinfile-months.dat% %random-1970-1990%. My hobbies are %spinfile2-hobbies.dat% and %spinfile2-hobbies.dat%.
+|
+My name is %spinfile-names.dat% and I am studying %spinfile2-studies.dat% and %spinfile2-studies.dat% at %columnspinfile-address_data.dat-3% / %columnspinfile-address_data.dat-1%.  
+}
